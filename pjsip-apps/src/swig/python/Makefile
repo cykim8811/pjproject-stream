@@ -27,7 +27,7 @@ SRC_DIR=../../../../pjsip/include
 SRCS=$(SRC_DIR)/pjsua2/endpoint.hpp $(SRC_DIR)/pjsua2/types.hpp
 
 GEN_DOC = -doxygen
-USE_THREADS = -threads
+USE_THREADS = -threads -DSWIG_NO_EXPORT_ITERATOR_METHODS
 # In SWIG 4.2 the build will fail if we use this flag
 #-DSWIG_NO_EXPORT_ITERATOR_METHODS
 SWIG_FLAGS += -w312 $(USE_THREADS) $(GEN_DOC)
